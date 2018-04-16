@@ -1,7 +1,11 @@
 package com.jguerrerope.moviechanllenge.di
 
+import android.arch.persistence.room.Room
 import com.jguerrerope.moviechanllenge.Configuration
+import com.jguerrerope.moviechanllenge.MovieApplication
 import com.jguerrerope.moviechanllenge.api.TMDBService
+import com.jguerrerope.moviechanllenge.db.MovieDao
+import com.jguerrerope.moviechanllenge.db.MovieDatabase
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -15,7 +19,7 @@ import javax.inject.Singleton
 class AppModule {
     @Singleton
     @Provides
-    fun provideGithubService(): TMDBService {
+    fun provideTMDBService(): TMDBService {
         val clientBuilder = OkHttpClient.Builder()
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
@@ -29,4 +33,13 @@ class AppModule {
                 .build()
                 .create<TMDBService>(TMDBService::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideMovieDatabase(app: MovieApplication): MovieDatabase =
+            Room.databaseBuilder(app, MovieDatabase::class.java, "movie.db").build()
+
+    @Singleton
+    @Provides
+    fun provideTvShowDao(db: MovieDatabase): MovieDao = db.movieDao()
 }
