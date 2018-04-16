@@ -2,4 +2,10 @@
     <string name="app_name">Movie Challenge</string>
     <string name="network_error">Oooops… Something went wrong. Check your internet connection and</string>
     <string name="retry">Retry</string>
+    <string name="overview">Overview</string>
+    <string name="similar_show_title">The similar shows</string>
+    <string name="vote_average_title">Vote Average</string>
+    <string name="vote_count_title">Vote Count</string>
+    <string name="popularity_title">Popularity</string>
+    <string name="popularity_format">%.2f</string>
 </resources>

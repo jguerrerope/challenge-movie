@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~ Copyright (C) 2017. appachegroup
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~
+  -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="18dp"
+    android:viewportHeight="18"
+    android:viewportWidth="22">
+
+    <group
+        android:name="Registro2"
+        android:translateX="-15.000000"
+        android:translateY="-93.000000">
+        <group
+            android:name="back"
+            android:translateX="16.000000"
+            android:translateY="94.000000">
+            <group
+                android:name="arrow-left"
+                android:translateX="0.588235"
+                android:translateY="0.941176">
+                <path
+                    android:name="Shape"
+                    android:fillType="evenOdd"
+                    android:pathData="M18.8235294,7 L0,7"
+                    android:strokeColor="#FFFFFF"
+                    android:strokeLineCap="round"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="2" />
+                <path
+                    android:name="Shape"
+                    android:fillType="evenOdd"
+                    android:pathData="M 7.05882353 14.1176471 L 0 7.05882353 L 7.05882353 0 "
+                    android:strokeColor="#FFFFFF"
+                    android:strokeLineCap="round"
+                    android:strokeLineJoin="round"
+                    android:strokeWidth="2" />
+            </group>
+        </group>
+    </group>
+</vector>

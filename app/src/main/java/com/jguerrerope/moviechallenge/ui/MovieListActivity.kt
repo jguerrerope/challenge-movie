@@ -36,7 +36,7 @@ class MovieListActivity : AppCompatActivity(), Injectable {
 
     private fun setUpViews() {
         adapter = MoviePagedListAdapter {
-            startActivity<MovieDetailsActivity>()
+            startActivity<MovieDetailsActivity>(Pair(MovieDetailsActivity.EXTRA_MOVIE, it))
         }
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MovieListActivity)
