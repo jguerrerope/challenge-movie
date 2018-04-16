@@ -1,0 +1,100 @@
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================================================== #
+# Xcode                                                                 #
+# https://github.com/github/gitignore/blob/master/Objective-C.gitignore #
+# ===================================================================== #
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+
+# ======= #
+# AppCode #
+# ======= #
+*.idea
+_RESOURCES
+Material #*
+Sin t*
+*.apk
+
+# ============== #
+# Android Studio #
+# ============== #
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# Android Studio
+/captures
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/captures
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
