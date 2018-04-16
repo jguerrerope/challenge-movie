@@ -1,13 +1,11 @@
-package com.jguerrerope.movies.ui
-
+package com.jguerrerope.moviechallenge.ui
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import com.jguerrerope.movies.R
+import com.jguerrerope.moviechallenge.R
 import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
-
 
 /**
  * The {@link SplashActivity} of the app that make as point entry
@@ -20,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
      */
     private val runnable: Runnable = Runnable {
         if (!isFinishing) {
-            startActivity<MoviesListActivity>()
+            startActivity<MovieListActivity>()
             finish()
         }
     }

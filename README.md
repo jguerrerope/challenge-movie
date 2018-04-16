@@ -1,8 +1,6 @@
-## Challenge
+## Challenge Task Specs
 
-### Task Specs
 - Whentheappislaunched,anin nitelistofthemostpopularmoviesisdisplayed.
-
 - As soon as the user scrolls down and reaches the end of the list, the next page of
 movies is loaded.
 - The other functionality is the search: the user should have the possibility to search
