@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
      */
     private val runnable: Runnable = Runnable {
         if (!isFinishing) {
-            startActivity<MoviesListActivity>()
+            startActivity<MovieListActivity>()
             finish()
         }
     }

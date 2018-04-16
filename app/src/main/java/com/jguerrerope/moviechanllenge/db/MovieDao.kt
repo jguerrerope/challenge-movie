@@ -17,10 +17,10 @@ interface MovieDao {
      * Inserts a list of Movie in the database. If some of those conflict, we assume that new info has just
      * arrived, so we replace it.
      *
-     * @param tvShowList The list of Movie
+     * @param movieList The list of Movie
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertList(tvShowList: List<Movie>)
+    fun insertList(movieList: List<Movie>)
 
     /**
      * Gets a [DataSource.Factory] of [Movie] that it automatically handles how to provide specific items to the UI.
@@ -39,7 +39,7 @@ interface MovieDao {
     fun getNextIndex(): Int
 
     /**
-     * Delete all tv shows in database
+     * Delete all movie in database
      */
     @Query("delete FROM movie")
     fun deleteAll()

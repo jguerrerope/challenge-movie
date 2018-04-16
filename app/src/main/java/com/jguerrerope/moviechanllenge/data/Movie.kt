@@ -11,7 +11,7 @@ import java.io.Serializable
 data class Movie(
         @PrimaryKey
         val id: Int,
-        val name: String,
+        val title: String,
         val popularity: Float,
         val voteCount: Int,
         val voteAverage: Float,

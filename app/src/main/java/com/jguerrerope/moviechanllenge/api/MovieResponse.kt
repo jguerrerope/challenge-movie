@@ -12,8 +12,8 @@ data class MovieResponse(
         @SerializedName("original_name")
         val originalName: String,
 
-        @SerializedName("name")
-        val name: String,
+        @SerializedName("title")
+        val title: String,
 
         @SerializedName("genre_ids")
         val genreIds: List<Int>,

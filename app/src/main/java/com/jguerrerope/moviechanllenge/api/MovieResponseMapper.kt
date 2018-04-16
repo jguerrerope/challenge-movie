@@ -8,7 +8,7 @@ class MovieResponseMapper @Inject constructor() {
     fun toEntity(value: MovieResponse): Movie {
         return Movie(
                 id = value.id,
-                name = value.name,
+                title = value.title,
                 popularity = value.popularity,
                 voteCount = value.voteCount,
                 voteAverage = value.voteAverage,

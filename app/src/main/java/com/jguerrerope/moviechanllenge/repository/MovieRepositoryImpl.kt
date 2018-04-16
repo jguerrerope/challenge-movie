@@ -18,7 +18,7 @@ import javax.inject.Inject
 class MovieRepositoryImpl @Inject constructor(
         private val api: TMDBService,
         private val database: MovieDatabase,
-        private val tvShowResponseMapper: MovieResponseMapper
+        private val responseMapper: MovieResponseMapper
 ) : MovieRepository {
     override fun getMoviePopularListing(
             itemsPerPage: Int,
@@ -65,7 +65,7 @@ class MovieRepositoryImpl @Inject constructor(
     private fun insertMovieListIntoDb(response: MovieListResponse?) {
         response?.let {
             val nextIndex = database.movieDao().getNextIndex()
-            val items = tvShowResponseMapper.toEntity(it.results)
+            val items = responseMapper.toEntity(it.results)
             items.forEachIndexed { index, item -> item.indexInResponse = nextIndex + index }
             database.movieDao().insertList(items)
         }

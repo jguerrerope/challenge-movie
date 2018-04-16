@@ -15,7 +15,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module
+@Module(includes = [(ViewModelModule::class)])
 class AppModule {
     @Singleton
     @Provides
@@ -41,5 +41,5 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideTvShowDao(db: MovieDatabase): MovieDao = db.movieDao()
+    fun provideMovieDatabase(db: MovieDatabase): MovieDao = db.movieDao()
 }
