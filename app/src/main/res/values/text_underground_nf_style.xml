@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Underground nf regular-->
+    <style name="TextUndergroundRegular">
+        <item name="android:fontFamily">@font/underground_nf_regular</item>
+    </style>
+
+    <style name="TextUndergroundRegular60" parent="TextUndergroundRegular">
+        <item name="android:textSize">@dimen/text_size_60</item>
+    </style>
+
+    <style name="TextUndergroundRegular60.Accent" parent="TextUndergroundRegular60">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+</resources>

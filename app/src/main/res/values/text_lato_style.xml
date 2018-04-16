@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Lato regular-->
+    <style name="TextLatoRegular">
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="TextLatoRegular14" parent="TextLatoRegular">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextLatoRegular14.Black" parent="TextLatoRegular14">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextLatoRegular14.White" parent="TextLatoRegular14">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--Lato bold-->
+    <style name="TextLatoBold">
+        <item name="android:fontFamily">@font/lato_bold</item>
+    </style>
+
+    <style name="TextLatoBold12" parent="TextLatoBold">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextLatoBold12.Black" parent="TextLatoBold12">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+    <style name="TextLatoBold16" parent="TextLatoBold">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TextLatoBold16.Black" parent="TextLatoBold16">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextLatoBold20" parent="TextLatoBold">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="TextLatoBold20.Black" parent="TextLatoBold20">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

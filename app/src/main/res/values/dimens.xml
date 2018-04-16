@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Text size dimens-->
+    <dimen name="text_size_60">60sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+
+    <!--Splash dimens-->
+    <dimen name="splash_logo_width">300dp</dimen>
+    <dimen name="splash_logo_height">200dp</dimen>
+</resources>
