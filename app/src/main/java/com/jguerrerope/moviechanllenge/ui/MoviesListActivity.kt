@@ -1,8 +1,8 @@
-package com.jguerrerope.movies.ui
+package com.jguerrerope.moviechanllenge.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.jguerrerope.movies.R
+import com.jguerrerope.moviechanllenge.R
 
 class MoviesListActivity : AppCompatActivity() {
 

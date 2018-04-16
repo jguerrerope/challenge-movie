@@ -1,4 +1,4 @@
-package com.jguerrerope.movies
+package com.jguerrerope.moviechanllenge
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

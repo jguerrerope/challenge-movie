@@ -1,13 +1,11 @@
-package com.jguerrerope.movies.ui
-
+package com.jguerrerope.moviechanllenge.ui
 
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import com.jguerrerope.movies.R
+import com.jguerrerope.moviechanllenge.R
 import org.jetbrains.anko.startActivity
 import java.util.concurrent.TimeUnit
-
 
 /**
  * The {@link SplashActivity} of the app that make as point entry
