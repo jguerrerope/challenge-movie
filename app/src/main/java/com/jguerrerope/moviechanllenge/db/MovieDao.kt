@@ -28,7 +28,7 @@ interface MovieDao {
      * @return A reactive [Movie] data source factory
      */
     @Query("SELECT * FROM movie ORDER BY indexInResponse ASC")
-    fun tvShowDataFactory(): DataSource.Factory<Int, Movie>
+    fun movieDataFactory(): DataSource.Factory<Int, Movie>
 
     /**
      * Gets the next index that can be used to insert in the [Movie] table in the database
