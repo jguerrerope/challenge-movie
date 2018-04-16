@@ -12,7 +12,7 @@ interface TMDBService {
     @GET("movie/popular?api_key=${BuildConfig.TMDB_ACCESS_TOKEN}")
     fun getMoviePopular(@Query("page") page: Int): Single<MovieListResponse>
 
-    @GET("search/movie/similar?api_key=${BuildConfig.TMDB_ACCESS_TOKEN}")
+    @GET("search/movie?api_key=${BuildConfig.TMDB_ACCESS_TOKEN}")
     fun getSearchMovie(@Query("query") search: String,
                        @Query("page") page: Int): Single<MovieListResponse>
 }

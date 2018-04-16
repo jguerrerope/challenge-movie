@@ -73,7 +73,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                 .load(url)
                 .transition(DrawableTransitionOptions.withCrossFade(200))
                 .apply(options)
-                .into(tvShowImageView)
+                .into(movieImageView)
     }
 
     companion object {

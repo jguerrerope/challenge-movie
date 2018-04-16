@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Transformations
 import android.arch.paging.LivePagedListBuilder
+import android.arch.paging.PagedList
 import com.jguerrerope.moviechallenge.api.MovieListResponse
 import com.jguerrerope.moviechallenge.api.MovieResponseMapper
 import com.jguerrerope.moviechallenge.api.TMDBService
@@ -11,6 +12,7 @@ import com.jguerrerope.moviechallenge.data.Listing
 import com.jguerrerope.moviechallenge.data.Movie
 import com.jguerrerope.moviechallenge.data.NetworkState
 import com.jguerrerope.moviechallenge.db.MovieDatabase
+import com.jguerrerope.moviechallenge.extension.switchMap
 import io.reactivex.Scheduler
 import io.reactivex.rxkotlin.subscribeBy
 import javax.inject.Inject
@@ -20,6 +22,7 @@ class MovieRepositoryImpl @Inject constructor(
         private val database: MovieDatabase,
         private val responseMapper: MovieResponseMapper
 ) : MovieRepository {
+
     override fun getMoviePopularListing(
             itemsPerPage: Int,
             backgroundScheduler: Scheduler): Listing<Movie> {
@@ -58,6 +61,31 @@ class MovieRepositoryImpl @Inject constructor(
         )
     }
 
+    override fun getSearchMovieListing(
+            search: String,
+            itemsPerPage: Int,
+            prefetchDistance: Int,
+            backgroundScheduler: Scheduler): Listing<Movie> {
+
+        val sourceFactory = SearchMovieDataSourceFactory(api, search, itemsPerPage,
+                responseMapper,
+                backgroundScheduler)
+        val pagedListConfig = PagedList.Config.Builder()
+                .setEnablePlaceholders(false)
+                .setInitialLoadSizeHint(prefetchDistance)
+                .setPageSize(itemsPerPage)
+                .build()
+        val pagedList = LivePagedListBuilder(sourceFactory, pagedListConfig)
+                .build()
+        val networkState = sourceFactory.sourceLiveData.switchMap { it.networkState }
+        return Listing(
+                pagedList = pagedList,
+                networkState = networkState,
+                retry = { sourceFactory.sourceLiveData.value?.retry() },
+                refresh = {},
+                refreshState = networkState
+        )
+    }
 
     /**
      * Inserts the response into the database while also assigning position indices to items.

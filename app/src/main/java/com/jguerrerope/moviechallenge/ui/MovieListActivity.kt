@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import com.jguerrerope.moviechallenge.R
 import com.jguerrerope.moviechallenge.data.NetworkState
 import com.jguerrerope.moviechallenge.data.Status
@@ -17,7 +19,6 @@ import com.jguerrerope.moviechallenge.ui.viewmodel.MoviePopularViewModel
 import kotlinx.android.synthetic.main.activity_movie_list.*
 import org.jetbrains.anko.startActivity
 import javax.inject.Inject
-
 
 class MovieListActivity : AppCompatActivity(), Injectable {
     @Inject
@@ -34,7 +35,21 @@ class MovieListActivity : AppCompatActivity(), Injectable {
         setUpViewModels()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_movie_list, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        if (item?.itemId == R.id.action_search) {
+            startActivity<SearchMovieListActivity>()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     private fun setUpViews() {
+        setUpToolbar()
         adapter = MoviePagedListAdapter {
             startActivity<MovieDetailsActivity>(Pair(MovieDetailsActivity.EXTRA_MOVIE, it))
         }
@@ -45,6 +60,12 @@ class MovieListActivity : AppCompatActivity(), Injectable {
         swipeRefreshLayout.setOnRefreshListener {
             viewModel.refresh()
         }
+    }
+
+    private fun setUpToolbar() {
+        setSupportActionBar(toolbar)
+        supportActionBar?.setHomeButtonEnabled(false)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
     }
 
     private fun setUpViewModels() {

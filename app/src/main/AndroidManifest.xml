@@ -20,5 +20,6 @@
         </activity>
         <activity android:name=".ui.MovieListActivity" />
         <activity android:name=".ui.MovieDetailsActivity" />
+        <activity android:name=".ui.SearchMovieListActivity" />
     </application>
 </manifest>
